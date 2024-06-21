@@ -1,6 +1,4 @@
-import users from "../data/advantages_banner.json" assert { type: "json" };
-
-export function advantagesBanner() {
+export function advantagesBanner(users) {
   const containerBannerAdvantagesElem = document.getElementById(
     "container_banner_advantages"
   );

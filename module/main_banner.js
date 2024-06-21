@@ -1,6 +1,6 @@
-import banner from "../data/main_banner.json" assert { type: "json" };
 
-export function mainBanner() {
+
+export function mainBanner(banner) {
   const containerPagesBannerElement = document.getElementById(
     "container_pages_window_main_banner"
   );

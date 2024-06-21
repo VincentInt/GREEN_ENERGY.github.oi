@@ -1,8 +1,4 @@
-import kits from "../data/kits_cards.json" assert { type: "json" };
-import innovators from "../data/innovators_cards.json" assert { type: "json" };
-import skills from "../data/skills_courses.json" assert { type: "json" };
-
-export function loadRepeatElem() {
+export function loadRepeatElem(kits,innovators, skills) {
   const containerKitsElem = document.getElementById("container_kits");
   const containerCardsInnovatorsElem = document.getElementById(
     "container_cards_innovators"
