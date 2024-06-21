@@ -6,14 +6,17 @@ a {
   text-decoration: none;
   color: white;
 }
+h1 {
+  font-size: clamp(20px, 1.2vw, 48px);
+}
 h2 {
-  font-size: 42px;
+  font-size: clamp(28px, 2vw, 42px);
 }
 h3 {
-  font-size: 36px;
+  font-size: clamp(24px, 2vw, 36px);
 }
 p {
-  font-size: 20px;
+  font-size: clamp(14px, 1.2vw, 20px);
 }
 button {
   cursor: pointer;
@@ -21,14 +24,14 @@ button {
   border: none;
 }
 .icon {
-  width: 40px;
+  width: clamp(30px, 5vw, 40px);
   object-fit: contain;
 }
 .yellow_btn,
 .green_btn {
   z-index: 8;
   padding: 12px 34px;
-  font-size: 18px;
+  font-size: clamp(16px, 5vw, 18x);
   border-radius: 12px;
 }
 .yellow_btn {
@@ -42,7 +45,7 @@ button {
 .btn_view {
   margin-top: 32px;
   padding: 0;
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
   font-weight: 500;
   color: rgb(60, 171, 144);
   background-color: transparent;
@@ -54,7 +57,7 @@ button {
 }
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 24px 50px;
   color: white;
@@ -70,13 +73,14 @@ header {
   }
   nav {
     display: flex;
+    justify-content: stretch;
     align-items: center;
     flex-wrap: wrap;
     button {
       z-index: 8;
       padding: 8px 28px;
       border-radius: 8px;
-      font-size: 18px;
+      font-size: clamp(14px, 1.2vw, 20px);
       color: white;
       background-color: transparent;
       &:hover {
@@ -89,7 +93,7 @@ header {
   .header_contact {
     text-align: end;
     a {
-      font-size: 20px;
+      font-size: clamp(14px, 1.2vw, 20px);
       font-weight: 500;
     }
   }
@@ -120,7 +124,7 @@ main {
       left: 10%;
       padding: 350px;
       margin: -350px;
-      width: 10%;
+      width: 20%;
       color: white;
       &:focus,
       &:hover {
@@ -175,22 +179,22 @@ main {
         }
         .container_info_page {
           position: absolute;
-          top: 40%;
+          top: 35%;
           left: 10%;
-          width: 45%;
+          width: 55%;
           color: rgb(255, 255, 255);
           h3 {
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: clamp(12px, 2vw, 30px);
           }
           p {
-            font-size: 30px;
+            font-size: clamp(18px, 1.5vw, 30px);
           }
           .container_btn {
             display: flex;
             align-items: center;
             gap: 10%;
-            margin-top: 30px;
+            margin-top: clamp(12px, 2vw, 30px);
           }
         }
       }
@@ -199,33 +203,36 @@ main {
   .section_info_install {
     display: flex;
     justify-content: center;
+    align-items: start;
+    flex-wrap: wrap-reverse;
     padding: 100px 0px;
-    gap: 200px;
+    gap: 10%;
     .container_item_info_install {
       max-width: 35%;
+      min-width: 400px;
       p {
         margin-top: 20px;
-        line-height: 32px;
+        line-height: clamp(22px, 2vw, 32px);
       }
       ol {
         counter-reset: item;
         list-style-type: none;
         line-height: 32px;
-        margin-top: 50px;
+        margin-top: clamp(15px, 3vw, 50px);
         padding: 0;
-        font-size: 20px;
+        font-size: clamp(14px, 1.2vw, 20px);
         font-weight: 600;
         color: black;
       }
       li {
         display: block;
+        font-size: clamp(14px, 1.2vw, 20px);
       }
       li:before {
         content: counter(item) "/";
         counter-increment: item;
-        letter-spacing: 10px;
+        letter-spacing: clamp(4px, 1.2vw, 10px);
         color: rgb(132, 189, 58);
-        margin-right: 10px;
       }
       ol li::marker {
         color: rgb(132, 189, 58);
@@ -242,7 +249,7 @@ main {
   .section_banner_green_energy {
     position: relative;
     width: 100%;
-    height: 650px;
+    height: 50vh;
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
@@ -253,11 +260,11 @@ main {
       left: 10%;
       p {
         width: 70%;
-        margin-top: 30px;
-        line-height: 32px;
+        margin-top: clamp(12px, 2vw, 30px);
+        line-height: clamp(22px, 2vw, 32px);
       }
       .yellow_btn {
-        margin-top: 32px;
+        margin-top: clamp(12px, 2vw, 30px);
       }
     }
   }
@@ -273,7 +280,7 @@ main {
         text-align: center;
         width: 1000px;
         p {
-          line-height: 32px;
+          line-height: clamp(22px, 2vw, 32px);
         }
       }
     }
@@ -281,6 +288,7 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 50px;
       gap: 30px;
       .item_card_kits {
@@ -298,10 +306,8 @@ main {
           p {
             margin-top: 24px;
           }
-
-          
         }
-        .container_btn{
+        .container_btn {
           display: flex;
           padding: 20px;
         }
@@ -314,12 +320,12 @@ main {
     align-items: center;
     margin-top: 100px;
     width: 100%;
-    height: 650px;
+    height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(./img/8112.png);
     .container_text {
-      width: 750px;
+      max-width: 750px;
       padding: 44px 50px;
       text-align: center;
       color: white;
@@ -334,6 +340,7 @@ main {
   .section_innovators {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 100px;
     gap: 50px;
     .container_text {
@@ -343,29 +350,31 @@ main {
       }
       p {
         margin-top: 20px;
-        line-height: 32px;
+        line-height: clamp(22px, 2vw, 32px);
         letter-spacing: 1.5px;
       }
     }
     .container_cards_innovators {
       display: flex;
       flex-wrap: wrap;
-      width: 45%;
-      gap: 30px;
+
+      max-width: 45%;
+      gap: 20px;
       .item_card_innovators {
         padding: 24px;
-        width: 350px;
+        width: 300px;
         border: 2px solid rgb(60, 171, 143);
         border-radius: 12px;
-        .container_img{
+        .container_img {
           width: 100%;
           height: 250px;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          border-radius: 12px;
-        }}
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+          }
+        }
         h4 {
           margin-top: 32px;
           font-size: 20px;
@@ -409,19 +418,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 100px;
     gap: 50px;
     .container_text {
-      width: 400px;
+      max-width: 400px;
       h2 {
         margin: 20px 0px;
       }
       p {
-        line-height: 32px;
+        line-height: clamp(22px, 2vw, 32px);
       }
     }
     .banner_reviews {
-      width: 800px;
+      max-width: 800px;
       padding: 40px;
       border-radius: 12px;
       background-color: rgb(241, 255, 252);
@@ -452,9 +462,9 @@ main {
         }
       }
       .text_comment {
-        width: 600px;
+        max-width: 600px;
         margin: 30px 0px;
-        line-height: 32px;
+        line-height: clamp(22px, 2vw, 32px);
       }
       .users_flex_container {
         display: flex;
@@ -493,7 +503,7 @@ main {
   }
 }
 footer {
-  padding: 80px 300px;
+  padding: clamp(20px, 5vw, 80px) clamp(30px, 5vw, 300px);
   margin-top: 80px;
   color: white;
   background-color: rgb(40, 54, 70);
@@ -514,15 +524,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 50px;
     form {
       display: flex;
       align-items: center;
+      margin-top: 20px;
       input {
         outline: none;
-        width: 300px;
+        width: clamp(200px, 5vw, 300px);
         padding: 10.8px 20px;
-        font-size: 16px;
+        font-size: clmap(14px, 2vw, 16px);
         color: white;
         border: 1px solid rgba(255, 255, 255, 0.403);
         border-radius: 12px;
@@ -536,13 +548,37 @@ footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: 20px;
       width: 55%;
       button {
         padding: 0;
-        font-size: 20px;
+        font-size: clamp(14px, 1.5vw, 20px);
         font-weight: 500;
         color: white;
         background-color: transparent;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .section_info_install {
+    .container_item_info_install {
+      margin-bottom: 20px;
+    }
+  }
+  .container_cards_innovators {
+    justify-content: center;
+    width: none;
+    width: 80%;
+    min-width: 350px;
+  }
+  .header_contact {
+    display: none;
+  }
+  footer {
+    .container_flex_footer {
+      nav {
+        width: 90%;
       }
     }
   }
